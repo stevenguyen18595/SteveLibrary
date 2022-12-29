@@ -1,0 +1,79 @@
+{
+  "root": true,
+  "ignorePatterns": ["projects/**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.json"],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@typescript-eslint/consistent-type-definitions": "error",
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-unused-expressions": "off",
+        "@typescript-eslint/member-ordering": "off",
+        "@typescript-eslint/prefer-for-of": "off",
+        "@typescript-eslint/explicit-member-accessibility": [
+          "off",
+          {
+            "accessibility": "explicit"
+          }
+        ],
+        "brace-style": ["error", "1tbs"],
+        "id-blacklist": "off",
+        "id-match": "off",
+        "max-len": ["error", { "code": 160 }],
+        "no-fallthrough": "off",
+        "no-underscore-dangle": "off",
+        "object-shorthand": ["error", "consistent-as-needed"],
+        "curly": ["error", "multi-line"],
+        "prefer-arrow/prefer-arrow-functions": [
+          "off",
+          {
+            "disallowPrototype": true,
+            "singleReturnOnly": false,
+            "classPropertiesAllowed": false
+          }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "variable",
+            "format": ["camelCase"]
+          },
+          {
+            "selector": "enum",
+            "format": ["PascalCase"]
+          }
+        ],
+        "@typescript-eslint/ban-types": [
+          "error",
+          {
+            "extendDefaults": true,
+            "types": {
+              "{}": false
+            }
+          }
+        ],
+        "lines-between-class-members": [
+          "warn",
+          "always",
+          { "exceptAfterSingleLine": true }
+        ],
+        "no-unused-vars": "warn",
+        "arrow-body-style": "off"
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "rules": {}
+    }
+  ]
+}
