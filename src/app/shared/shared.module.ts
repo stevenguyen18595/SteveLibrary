@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [NavigationBarComponent],
   imports: [],
-  exports: [],
+  exports: [NavigationBarComponent],
   providers: [],
 })
 export class SharedModule {}
